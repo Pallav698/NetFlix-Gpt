@@ -4,6 +4,10 @@
 -configured tailwind
 -Header
 -Login Form
+-Sign up form
+-firebase authentication
+- sign in / sign out
+- store
 # Features
 Login/Sign up Page
     -sign in  / sign up form
