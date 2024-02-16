@@ -8,6 +8,8 @@
 -firebase authentication
 - sign in / sign out
 - store
+- add hardcoded values to constants file
+- created custom hook for trailer running on browse page
 # Features
 Login/Sign up Page
     -sign in  / sign up form

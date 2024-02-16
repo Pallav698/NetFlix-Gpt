@@ -3,11 +3,10 @@ import Header from './Header';
 import { checkValidateData } from '../utils/validate';
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from '../utils/firebase';
-import { useNavigate } from 'react-router-dom';
+import { BG_IMAGE } from '../utils/constant';
 
 
 const Login = () => {
-  const navigate = useNavigate();
   const [ isSignIn, setIsSignIn ] = useState(true);
   const [  errorMesage, setErrorMessage ] = useState(null);
   const email = useRef(null);
@@ -35,9 +34,7 @@ const Login = () => {
           // Signed up
           const user = userCredential.user;
           // ...
-          console.log(user);
-          navigate("/");
-          
+           
         })
         .catch((error) => {
           const errorCode = error.code;
@@ -52,8 +49,7 @@ const Login = () => {
         .then((userCredential) => {
           // Signed in
           const user = userCredential.user;
-          console.log(user);
-          navigate("/browse");
+          
           // ...
         })
         .catch((error) => {
@@ -68,7 +64,7 @@ const Login = () => {
       <Header />
       <div className="absolute">
         <img
-          src="https://assets.nflxext.com/ffe/siteui/vlv3/4da5d2b1-1b22-498d-90c0-4d86701dffcc/98a1cb1e-5a1d-4b98-a46f-995272b632dd/IN-en-20240129-popsignuptwoweeks-perspective_alpha_website_large.jpg"
+          src={BG_IMAGE}
           alt="bg-img"
         ></img>
       </div>
